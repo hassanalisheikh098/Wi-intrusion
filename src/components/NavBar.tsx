@@ -19,9 +19,8 @@ export default function NavBar() {
   ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? 'bg-[#0A0C0B]/95 backdrop-blur-md border-b border-[rgba(255,255,255,0.06)]' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-[#0A0C0B]/95 backdrop-blur-md border-b border-[rgba(255,255,255,0.06)]' : 'bg-transparent'
+      }`}>
       {/* Status bar */}
       <div className="border-b border-[rgba(255,255,255,0.04)] bg-[rgba(245,166,35,0.04)]">
         <div className="section-container">
@@ -60,9 +59,9 @@ export default function NavBar() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <a href="#waitlist" className="btn-primary text-[12px] py-2.5 px-6">
+            <a href="/login" className="btn-primary text-[12px] py-2.5 px-6">
               <span className="inline-block w-2 h-2 rounded-full bg-[#0A0C0B] animate-pulse-green" />
-              Join Waitlist
+              Login
             </a>
           </div>
 
@@ -76,9 +75,8 @@ export default function NavBar() {
       </div>
 
       {/* Mobile menu */}
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-        menuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
-      } bg-[#0F1210] border-b border-[rgba(255,255,255,0.06)]`}>
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+        } bg-[#0F1210] border-b border-[rgba(255,255,255,0.06)]`}>
         <div className="section-container py-4 flex flex-col gap-4">
           {navLinks.map(l => (
             <a key={l.href} href={l.href} onClick={() => setMenuOpen(false)}
